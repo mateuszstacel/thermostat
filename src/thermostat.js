@@ -32,7 +32,7 @@ Thermostat.prototype.isMinimumTemperature = function() {
 };
 //maximum temperature on thermostat
 Thermostat.prototype.isMaximumTemperature = function() {
-  if (this.isPowerSavingModeOn === false) {
+  if (this.powerSavingMode === false) {
     //if power save mode is off then max temperature is 32
     return this.temperature === this.MAX_LIMIT_PSM_OFF;
   } //if power save mode is on then max temperature is 25
@@ -64,4 +64,10 @@ Thermostat.prototype.energyUsage = function() {
     return 'medium-usage';
   } //over 25 temperature high usage
   return 'high-usage';
+}
+ //reseting temperature when is bigger then 25
+Thermostat.prototype.resetAfterPswOn = function () {
+  if(this.powerSavingMode === true) {
+  return this.temperature = 25;
+};
 }
