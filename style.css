@@ -1,5 +1,28 @@
 body{
-  background-color: grey;
+  background-image: url("wall.jpg");
+}
+
+.green{
+    color: green;
+}
+
+.orange{
+    color: orange;
+}
+
+.low-usage
+{
+  color: green;
+}
+
+.medium-usage
+{
+  color: orange;
+}
+
+.high-usage
+{
+  color: red;
 }
 
 #container
@@ -21,6 +44,7 @@ body{
   border-width: 5px;
   border-style: solid;
   border-color: white;
+  opacity: 0.95;
 }
 
 #naglowek

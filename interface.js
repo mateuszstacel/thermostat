@@ -2,6 +2,7 @@ var thermostat = new Thermostat();
 //print temperature to UI
 $(document).ready(function() {
   $('#temperature').text(thermostat.temperature);
+  $('#power-status').attr('class', 'green');
 });
 //add temperature after click and update temerature wievs
 $(document).ready(function() {
@@ -29,6 +30,7 @@ $(document).ready(function() {
   $('#powersaving-off').click(function() { // this is an alternate version of .on('click'), with a sprinkle of jQuery syntactic sugar
     thermostat.switchPowerSavingModeOff();
     $('#power-status').text('off')
+    $('#power-status').attr('class', 'orange')
   });
 });
 //switch psw on and reset temperature to defaault 25 as max of the psw mode and update temperature views
@@ -38,9 +40,10 @@ $(document).ready(function() {
     thermostat.resetAfterPswOn();
     $('#temperature').text(thermostat.temperature);
     $('#power-status').text('on')
+    $('#power-status').attr('class', 'green')
   });
 });
 
 $.get('http://api.openweathermap.org/data/2.5/weather?q=London&appid=a3d9eb01d4de82b9b8d0849ef604dbed&units=metric', function(data) {
   $('#current-temperature').text(data.main.temp);
-})
+});
