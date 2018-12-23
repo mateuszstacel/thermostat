@@ -1,8 +1,6 @@
-##Thermostat
+## Deployed on Heroku
 
-How to run?
-- Clone the repo and open `index.html` to run the app locally.
-
+[Heroku](https://thermostat-app-js.herokuapp.com)
 ![Pictures of UI](thermostat.png)
 
 
