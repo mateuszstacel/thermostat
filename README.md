@@ -1,11 +1,13 @@
 ## Deployed on Heroku
 
 [Heroku](https://thermostat-app-js.herokuapp.com)
+
+
 ![Pictures of UI](thermostat.png)
 
 
 
-##Specification:
+## Specification:
 ```
 Thermostat starts at 20 degrees
 You can increase the temperature with an up function
